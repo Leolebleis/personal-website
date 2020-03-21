@@ -1,6 +1,8 @@
 import React from "react";
 import { Repo } from "../repo/Repo";
 
+const user = "Leolebleis";
+
 class Repos extends React.Component {
   state = {
     repos: [],
@@ -9,7 +11,7 @@ class Repos extends React.Component {
   };
 
   componentDidMount() {
-    fetch("https://api.github.com/users/Leolebleis/repos?sort=pushed")
+    fetch(`https://api.github.com/users/${user}/repos?sort=pushed`)
       .then(convertResponseToJson)
       .then(response =>
         this.setState({
