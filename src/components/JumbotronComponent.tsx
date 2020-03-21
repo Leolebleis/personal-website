@@ -8,6 +8,7 @@ import { Layout } from "./Layout";
 const Styles = styled.div`
   .jumbo {
     background: url(${backgroundImage}) no-repeat fixed bottom;
+
     background-size: cover;
     color: #ccc;
     height: 400px;
@@ -28,10 +29,7 @@ const Styles = styled.div`
 
   .container {
     width: 100%;
-    position: relative;
     top: 50%;
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
     text-align: center;
   }
 `;
@@ -42,9 +40,9 @@ export const JumbotronComponent = () => (
       <div className="overlay" />
       <Layout>
         <Container className="container">
-            <h2>Hi! Welcome to my site :)</h2>
-            <p>Feel free to explore the different features on here!</p>
-            <p>It is still a WiP...</p>
+          <h2>Hi! Welcome to my site :)</h2>
+          <p>Feel free to explore the different features on here!</p>
+          <p>It is still a WiP...</p>
         </Container>
       </Layout>
     </Jumbotron>

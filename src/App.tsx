@@ -2,6 +2,7 @@ import React from "react";
 import About from "./components/about/About";
 import Contact from "./components/contact/Contact";
 import Repos from "./components/repos/Repos";
+import { Footer } from "./components/Footer";
 import { NoMatch } from "./components/no-match/NoMatch";
 import { Layout } from "./components/Layout";
 import { NavigationBar } from "./components/NavigationBar";
@@ -150,6 +151,7 @@ class App extends React.Component {
               <Route component={NoMatch} />
             </Switch>
           </Router>
+          <Footer />
         </Layout>
       </React.Fragment>
     );

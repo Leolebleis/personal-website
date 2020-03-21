@@ -5,49 +5,47 @@ import styled from "styled-components";
 const Styles = styled.div`
   .picture {
     border-radius: 8px;
-    width: 400px;
+    width: 40%;
+    box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      box-shadow: rgba(0, 0, 0, 0.22) 10px 10px 43px;
+      transform: translate3d(-3px, -3px, 0px);
+    }
   }
 
-  .table > tbody > tr > td,
-  .table > tbody > tr > th,
-  .table > tfoot > tr > td,
-  .table > tfoot > tr > th,
-  .table > thead > tr > td,
-  .table > thead > tr > th {
-    border: 0;
-  }
-  .td {
-    padding: 0;
+  .wrapper {
+    border: 1px solid black;
+    overflow: hidden;
   }
 
-  .td-picture {
-    text-align: center;
+  .text {
+    border: 1px solid red;
+    float: left; /* add this */
+  }
+
+  .picture-div {
+    border: 1px solid green;
+    overflow: hidden; /* if you don't want #second to wrap below #first */
   }
 `;
 
 class About extends React.Component<IAboutProps> {
   render() {
     return (
-      <div>
-        <Styles>
-          <table className="table">
-            <tbody>
-              <tr>
-                <td className="td">
-                  <h2>About my site...</h2>
-                  <p>
-                    Feel free to explore the different features on this site!
-                  </p>
-                  <p>This is the about page!</p>
-                </td>
-                <td className="td-picture">
-                  <img className="picture" src={pictureofme} alt="Me!" />
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </Styles>
-      </div>
+      <Styles>
+        <div className="wrapper">
+          <div className="text">
+            <h2>About my site</h2>
+            <p>Feel free to explore the different features on this site!</p>
+            <p>This is the about page!</p>
+          </div>
+          <div className="picture-div">
+            <img className="picture" src={pictureofme} alt="Me!" />
+          </div>
+        </div>
+      </Styles>
     );
   }
 }
