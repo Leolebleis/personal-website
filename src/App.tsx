@@ -13,6 +13,11 @@ class App extends React.Component {
     return (
       <React.Fragment>
         <NavigationBar />
+
+        <ScrollableAnchor id={"home"}>
+          <div />
+        </ScrollableAnchor>
+
         <JumbotronComponent />
 
         <Layout>
