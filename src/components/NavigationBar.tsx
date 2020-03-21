@@ -10,12 +10,11 @@ const Styles = styled.div`
     position: fixed;
   }
 
-  .navbar-brand,
   .navbar-nav .nav-link {
     color: #bbb;
 
     &:hover {
-      color: white;
+      color: black;
     }
   }
 `;
@@ -31,6 +30,9 @@ export const NavigationBar = () => (
           </Nav.Item>
           <Nav.Item>
             <Nav.Link href="/#about">About</Nav.Link>
+          </Nav.Item>
+          <Nav.Item>
+            <Nav.Link href="/#projects">Projects</Nav.Link>
           </Nav.Item>
           <Nav.Item>
             <Nav.Link href="/#contact">Contact</Nav.Link>
