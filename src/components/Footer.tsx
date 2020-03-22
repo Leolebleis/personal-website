@@ -1,24 +1,25 @@
 import React from "react";
-import styled from "styled-components";
-
-const Styles = styled.div`
-  .footer {
-    float: right;
-  }
-`;
 
 export const Footer = () => {
   return (
-    <Styles>
-      <br />
-      <hr />
-      <div className="footer">
+    <React.Fragment>
+      <hr className="mt-5" />
+      Icons made by{" "}
+      <a href="https://www.flaticon.com/authors/freepik" title="Freepik">
+        Freepik
+      </a>{" "}
+      from{" "}
+      <a href="https://www.flaticon.com/" title="Flaticon">
+        {" "}
+        www.flaticon.com
+      </a>
+      <div className="float-right">
         &copy; 2020
         <a href="/"> Léo Le Bleis</a>
         <br />
         <br />
         <br />
       </div>
-    </Styles>
+    </React.Fragment>
   );
 };

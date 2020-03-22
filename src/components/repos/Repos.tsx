@@ -3,7 +3,19 @@ import { Repo } from "../repo/Repo";
 
 const user = "Leolebleis";
 
-class Repos extends React.Component {
+const convertResponseToJson = (response: any) => {
+  if (response.status !== 200) {
+    console.error(
+      "There was a problem with the API response, status code:",
+      response.status
+    );
+    return;
+  }
+
+  return response.json();
+};
+
+export default class Repos extends React.Component {
   state = {
     repos: [],
     loading: true,
@@ -30,28 +42,14 @@ class Repos extends React.Component {
   render() {
     const repos = this.state.repos;
     return (
-      <React.Fragment>
-        <h2>Check out my projects</h2>
-        <div>
+      <div className="text-center">
+        <h2 className="mt-5">Check out my projects</h2>
+        <div className="row d-flex d-inline-flex justify-content-center">
           {repos.map(repo => (
             <Repo repo={repo} />
           ))}
         </div>
-      </React.Fragment>
+      </div>
     );
   }
 }
-
-const convertResponseToJson = (response: any) => {
-  if (response.status !== 200) {
-    console.error(
-      "There was a problem with the API response, status code:",
-      response.status
-    );
-    return;
-  }
-
-  return response.json();
-};
-
-export default Repos;

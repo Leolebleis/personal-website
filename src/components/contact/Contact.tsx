@@ -1,18 +1,22 @@
 import React from "react";
+import { Card, Row, Col } from "react-bootstrap";
+import MyForm from "../MyForm";
 
-class Contact extends React.Component<IContactProps> {
+class Contact extends React.Component {
   render() {
     return (
       <div>
-        <h2>Contact me</h2>
-        <p>Feel free to explore the different features on this site!</p>
-        <p>This is the contact page!</p>
+        <Row className="d-flex justify-content-center">
+          <Col className="col-lg-8">
+            <h2 className="mt-5">Contact me</h2>
+            <Card className="w-100">
+              <MyForm />
+            </Card>
+          </Col>
+        </Row>
       </div>
     );
   }
 }
 
 export default Contact;
-
-interface IContactProps {
-}

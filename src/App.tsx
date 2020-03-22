@@ -4,41 +4,43 @@ import Contact from "./components/contact/Contact";
 import Repos from "./components/repos/Repos";
 import { Footer } from "./components/Footer";
 import { NoMatch } from "./components/no-match/NoMatch";
-import { Layout } from "./components/Layout";
 import { NavigationBar } from "./components/NavigationBar";
-import { JumbotronComponent } from "./components/JumbotronComponent";
 import ScrollableAnchor from "react-scrollable-anchor";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import "bootstrap/dist/css/bootstrap.min.css";
+import { Container, Row, Col } from "react-bootstrap";
 
 class App extends React.Component {
   render() {
     return (
       <React.Fragment>
-        <NavigationBar />
-
         <ScrollableAnchor id={"home"}>
           <div />
         </ScrollableAnchor>
 
-        <JumbotronComponent />
-
-        <Layout>
+        <NavigationBar />
+        <Container>
           <Router>
             <Switch>
               <Route path="/" exact>
-                <ScrollableAnchor id={"about"}>
-                  <About />
-                </ScrollableAnchor>
-
-                <ScrollableAnchor id={"projects"}>
-                  <Repos />
-                </ScrollableAnchor>
-
-                <ScrollableAnchor id={"contact"}>
-                  <Contact />
-                </ScrollableAnchor>
-
-                <p>
+                <Row>
+                  <ScrollableAnchor id={"about"}>
+                    <About />
+                  </ScrollableAnchor>
+                </Row>
+                <Row>
+                  <ScrollableAnchor id={"projects"}>
+                    <Repos />
+                  </ScrollableAnchor>
+                </Row>
+                <Row>
+                  <Col>
+                    <ScrollableAnchor id={"contact"}>
+                      <Contact />
+                    </ScrollableAnchor>
+                  </Col>
+                </Row>
+                <p className="text-justify">
                   Lorem Ipsum is simply dummy text of the printing and
                   typesetting industry. Lorem Ipsum has been the industry's
                   standard dummy text ever since the 1500s, when an unknown
@@ -152,7 +154,7 @@ class App extends React.Component {
             </Switch>
           </Router>
           <Footer />
-        </Layout>
+        </Container>
       </React.Fragment>
     );
   }

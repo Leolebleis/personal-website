@@ -10,7 +10,9 @@ const Styles = styled.div`
 export const Layout = (props: Props<React.ReactNode>) => {
   return (
     <Styles>
-      <Container className="container">{props.children}</Container>
+      <Container className="container" fluid>
+        {props.children}
+      </Container>
     </Styles>
   );
 };
