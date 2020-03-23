@@ -1,5 +1,5 @@
 import React from "react";
-import { Repo } from "../repo/Repo";
+import { Repo } from "./Repo";
 
 const user = "Leolebleis";
 
@@ -44,10 +44,10 @@ export default class Repos extends React.Component {
     return (
       <div className="text-center">
         <h2 className="mt-5">Check out my projects</h2>
-        <div className="row d-flex d-inline-flex justify-content-center">
-          {repos.map(repo => (
-            <Repo repo={repo} />
-          ))}
+        <div className="row d-flex justify-content-center">
+            {repos.map(repo => (
+              <Repo repo={repo} />
+            ))}
         </div>
       </div>
     );

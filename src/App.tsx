@@ -1,45 +1,41 @@
 import React from "react";
-import About from "./components/about/About";
-import Contact from "./components/contact/Contact";
-import Repos from "./components/repos/Repos";
+import About from "./components/About";
+import Contact from "./components/Contact";
+import Repos from "./components/Repos";
 import { Footer } from "./components/Footer";
-import { NoMatch } from "./components/no-match/NoMatch";
+import { NoMatch } from "./components/NoMatch";
 import { NavigationBar } from "./components/NavigationBar";
 import ScrollableAnchor from "react-scrollable-anchor";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { Container, Row, Col } from "react-bootstrap";
+import { Container } from "react-bootstrap";
 
 class App extends React.Component {
   render() {
     return (
       <React.Fragment>
-        <ScrollableAnchor id={"home"}>
-          <div />
-        </ScrollableAnchor>
+        <Container>
+          <ScrollableAnchor id={"home"}>
+            <div />
+          </ScrollableAnchor>
 
-        <NavigationBar />
+          <NavigationBar />
+        </Container>
         <Container>
           <Router>
             <Switch>
               <Route path="/" exact>
-                <Row>
-                  <ScrollableAnchor id={"about"}>
-                    <About />
-                  </ScrollableAnchor>
-                </Row>
-                <Row>
-                  <ScrollableAnchor id={"projects"}>
-                    <Repos />
-                  </ScrollableAnchor>
-                </Row>
-                <Row>
-                  <Col>
-                    <ScrollableAnchor id={"contact"}>
-                      <Contact />
-                    </ScrollableAnchor>
-                  </Col>
-                </Row>
+                <ScrollableAnchor id={"about"}>
+                  <About />
+                </ScrollableAnchor>
+
+                <ScrollableAnchor id={"projects"}>
+                  <Repos />
+                </ScrollableAnchor>
+
+                <ScrollableAnchor id={"contact"}>
+                  <Contact />
+                </ScrollableAnchor>
                 <p className="text-justify">
                   Lorem Ipsum is simply dummy text of the printing and
                   typesetting industry. Lorem Ipsum has been the industry's

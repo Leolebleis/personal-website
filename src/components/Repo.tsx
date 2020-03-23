@@ -4,10 +4,10 @@ import Card from "react-bootstrap/Card";
 export const Repo = (props: Props) => (
   <div>
     <Card
-      className="col-xs-6 mx-2 mt-2"
+      className="col-xs-6 m-2"
       style={{ width: "18rem", height: "15em" }}
     >
-      <Card.Body className="text-center d-flex flex-column">
+      <Card.Body className="">
         <Card.Title>{props.repo.name}</Card.Title>
         <pre>{props.repo.language}</pre>
         <p>{props.repo.description}</p>
