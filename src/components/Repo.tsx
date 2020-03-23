@@ -7,13 +7,13 @@ export const Repo = (props: Props) => (
       className="col-xs-6 m-2"
       style={{ width: "18rem", height: "15em" }}
     >
-      <Card.Body className="">
+      <Card.Body className="d-flex flex-column">
         <Card.Title>{props.repo.name}</Card.Title>
         <pre>{props.repo.language}</pre>
         <p>{props.repo.description}</p>
-        <div className="mt-auto">
+        <div className="mt-auto align-bottom">
           <a
-            className="btn btn-primary"
+            className="btn btn-primary mt-auto"
             href={props.repo.html_url}
             target="_blank"
             rel="noopener noreferrer"

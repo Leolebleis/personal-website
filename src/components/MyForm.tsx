@@ -1,11 +1,6 @@
 import React from "react";
 import { Row, Col } from "react-bootstrap";
-import styled from "styled-components";
-
-const Styles = styled.div`
-  .input {
-  }
-`;
+import TextField from "@material-ui/core/TextField";
 
 export default class MyForm extends React.Component<{}, { status: string }> {
   constructor(props: any) {
@@ -19,57 +14,51 @@ export default class MyForm extends React.Component<{}, { status: string }> {
   render() {
     const { status } = this.state;
     return (
-      <Styles>
+      <div>
         <form
+          noValidate
+          autoComplete="off"
           onSubmit={this.submitForm}
           action="https://formspree.io/mbjkpdwv"
           method="POST"
         >
           <div className="md-form">
             <Row className="d-flex justify-content-center">
-              <Col className="col-lg">
-                <div className="input-group m-3">
-                  <div className="input-group-prepend">
-                    <span className="input-group-text">Hello</span>
-                  </div>
-                  <input
-                    className="form-control"
-                    placeholder="Full name *"
-                    type="text"
-                    name="Fullname"
+              <Col className="col-lg mt-3">
+                <div className="input-group">
+                  <TextField
+                    fullWidth
+                    className="mx-5 mt-2"
+                    id="standard-basic"
+                    name="Full name"
+                    label="Full name"
                   />
                 </div>
-                <div className="input-group m-3">
-                  <div className="input-group-prepend">
-                    <span className="input-group-text">Hello</span>
-                  </div>
-                  <input
-                    className="form-control"
-                    placeholder="Email *"
-                    type="email"
+                <div className="input-group">
+                  <TextField
+                    fullWidth
+                    className="mx-5 mt-2"
+                    id="standard-basic"
                     name="Email"
+                    label="Email"
                   />
                 </div>
-                <div className="input-group m-3">
-                  <div className="input-group-prepend">
-                    <span className="input-group-text">Hello</span>
-                  </div>
-                  <input
-                    className="form-control"
-                    placeholder="Subject *"
-                    type="text"
+                <div className="input-group">
+                  <TextField
+                    fullWidth
+                    className="mx-5 mt-2"
+                    id="standard-basic"
                     name="Subject"
+                    label="Subject"
                   />
                 </div>
-                <div className="input-group m-3">
-                  <div className="input-group-prepend">
-                    <span className="input-group-text">Hello</span>
-                  </div>
-                  <input
-                    className="form-control"
-                    placeholder="Message *"
-                    type="text"
+                <div className="input-group">
+                  <TextField
+                    fullWidth
+                    className="mx-5 mt-2"
+                    id="standard-basic"
                     name="Message"
+                    label="Message"
                   />
                 </div>
               </Col>
@@ -80,14 +69,14 @@ export default class MyForm extends React.Component<{}, { status: string }> {
             <p>Thanks!</p>
           ) : (
             <div className="text-center">
-              <button className="btn btn-primary m-2">Submit</button>
+              <button className="btn btn-primary m-4">Submit</button>
             </div>
           )}
           {status === "ERROR" && (
             <p className="text-center">Oops! There was an error.</p>
           )}
         </form>
-      </Styles>
+      </div>
     );
   }
 

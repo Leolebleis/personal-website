@@ -2,12 +2,12 @@ import React from "react";
 import pictureofme from "../assets/pictureofme.jpg";
 import styled from "styled-components";
 import { Container, Row, Col, Card } from "react-bootstrap";
-import react from "../assets/react.svg";
-import spring from "../assets/spring.svg";
-import java from "../assets/java.svg";
-import javascript from "../assets/javascript.svg";
-import python from "../assets/python.svg";
-import mongodb from "../assets/mongodb.svg";
+import react from "../assets/stack/react.svg";
+import spring from "../assets/stack/spring.svg";
+import java from "../assets/stack/java.svg";
+import javascript from "../assets/stack/javascript.svg";
+import python from "../assets/stack/python.svg";
+import mongodb from "../assets/stack/mongodb.svg";
 
 const Styles = styled.div`
   .picture {
