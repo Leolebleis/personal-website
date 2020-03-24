@@ -7,9 +7,9 @@ class Contact extends React.Component {
     return (
       <div>
         <Container>
-          <Row className="d-flex justify-content-center">
+          <Row className="d-flex justify-content-center mt-2">
             <Col className="col-lg-8">
-              <h2 className="mt-5">Contact me</h2>
+              <h2>Contact me</h2>
               <Card>
                 <MyForm />
               </Card>

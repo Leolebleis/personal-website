@@ -1,5 +1,6 @@
 import React from "react";
 import { Repo } from "./Repo";
+import { Row, Container } from "react-bootstrap";
 
 const user = "Leolebleis";
 
@@ -42,14 +43,14 @@ export default class Repos extends React.Component {
   render() {
     const repos = this.state.repos;
     return (
-      <div className="text-center">
+      <Container>
         <h2 className="mt-5">Check out my projects</h2>
-        <div className="row d-flex justify-content-center">
-            {repos.map(repo => (
-              <Repo repo={repo} />
-            ))}
-        </div>
-      </div>
+        <Row>
+          {repos.map(repo => (
+            <Repo repo={repo} />
+          ))}
+        </Row>
+      </Container>
     );
   }
 }

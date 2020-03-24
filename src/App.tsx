@@ -9,6 +9,7 @@ import ScrollableAnchor from "react-scrollable-anchor";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Container } from "react-bootstrap";
+import Header from "./components/Header";
 
 class App extends React.Component {
   render() {
@@ -21,6 +22,7 @@ class App extends React.Component {
 
           <NavigationBar />
         </Container>
+        <Header />
         <Container>
           <Router>
             <Switch>

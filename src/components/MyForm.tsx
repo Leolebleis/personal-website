@@ -1,6 +1,8 @@
 import React from "react";
 import { Row, Col } from "react-bootstrap";
 import TextField from "@material-ui/core/TextField";
+import Button from "@material-ui/core/Button";
+import Icon from "@material-ui/core/Icon";
 
 export default class MyForm extends React.Component<{}, { status: string }> {
   constructor(props: any) {
@@ -69,7 +71,14 @@ export default class MyForm extends React.Component<{}, { status: string }> {
             <p>Thanks!</p>
           ) : (
             <div className="text-center">
-              <button className="btn btn-primary m-4">Submit</button>
+              <Button
+                className="m-4"
+                variant="contained"
+                color="primary"
+                endIcon={<Icon>send</Icon>}
+              >
+                Send
+              </Button>
             </div>
           )}
           {status === "ERROR" && (
