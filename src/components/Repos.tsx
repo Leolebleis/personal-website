@@ -10,33 +10,7 @@ const convertResponseToJson = (response: any) => {
       "There was a problem with the API response, status code:",
       response.status
     );
-    const repos = [
-      {
-        name: response.status + "!",
-        description: "There was an issue with the github API.",
-        html_url: "https://github.com/Leolebleis/",
-        language: "French"
-      },
-      {
-        name: response.status + "!",
-        description: "There was an issue with the github API.",
-        html_url: "https://github.com/Leolebleis/",
-        language: "French"
-      },
-      {
-        name: response.status + "!",
-        description: "There was an issue with the github API.",
-        html_url: "https://github.com/Leolebleis/",
-        language: "French"
-      },
-      {
-        name: response.status + "!",
-        description: "There was an issue with the github API.",
-        html_url: "https://github.com/Leolebleis/",
-        language: "French"
-      }
-    ];
-    return repos;
+    return;
   }
 
   return response.json();
@@ -50,20 +24,50 @@ export default class Repos extends React.Component {
   };
 
   componentDidMount() {
-    fetch(`https://api.github.com/users/${user}/repos?sort=pushed`)
-      .then(convertResponseToJson)
-      .then(response =>
-        this.setState({
-          repos: response,
-          loading: false
-        })
-      )
-      .catch(error =>
-        this.setState({
-          loading: false,
-          error: true
-        })
-      );
+    // fetch(`https://api.github.com/users/${user}/repos?sort=pushed`)
+    //   .then(convertResponseToJson)
+    //   .then(response =>
+    //     this.setState({
+    //       repos: response,
+    //       loading: false
+    //     })
+    //   )
+    // .catch(error =>
+    //   this.setState({
+    //     loading: false,
+    //     error: true
+    //   })
+    // );
+
+    this.setState({
+      loading: false,
+      repos: [
+        {
+          name: "400!",
+          description: "There was an issue with the github API.",
+          html_url: "https://github.com/Leolebleis/",
+          language: "French"
+        },
+        {
+          name: "400!",
+          description: "There was an issue with the github API.",
+          html_url: "https://github.com/Leolebleis/",
+          language: "French"
+        },
+        {
+          name: "400!",
+          description: "There was an issue with the github API.",
+          html_url: "https://github.com/Leolebleis/",
+          language: "French"
+        },
+        {
+          name: "400!",
+          description: "There was an issue with the github API.",
+          html_url: "https://github.com/Leolebleis/",
+          language: "French"
+        }
+      ]
+    });
   }
 
   render() {
@@ -76,7 +80,7 @@ export default class Repos extends React.Component {
 
         <Row className="h-100 mb-2">
           {repos.map((repo, i) => (
-            <Col className="d-flex col-12 col-md-4" key={i}>
+            <Col className="d-flex col-12 col-md-4 d-flex justify-content-center" key={i}>
               <Repo repo={repo} />
             </Col>
           ))}

@@ -3,13 +3,6 @@ import { Row, Col } from "react-bootstrap";
 import TextField from "@material-ui/core/TextField";
 import Button from "@material-ui/core/Button";
 import Icon from "@material-ui/core/Icon";
-import styled from "styled-components";
-
-const Styles = styled.div`
-  .shadow {
-    box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px;
-  }
-`;
 
 export default class MyForm extends React.Component<{}, { status: string }> {
   constructor(props: any) {
@@ -23,77 +16,75 @@ export default class MyForm extends React.Component<{}, { status: string }> {
   render() {
     const { status } = this.state;
     return (
-      <Styles>
-        <form
-          className="border border-white rounded shadow"
-          noValidate
-          autoComplete="off"
-          onSubmit={this.submitForm}
-          action="https://formspree.io/mbjkpdwv"
-          method="POST"
-        >
-          <div className="md-form border-white border">
-            <Row className="d-flex justify-content-center">
-              <Col className="col-lg mt-3">
-                <div className="input-group">
-                  <TextField
-                    fullWidth
-                    className="mx-5 mt-2"
-                    id="standard-basic"
-                    name="Full name"
-                    label="Full name"
-                  />
-                </div>
-                <div className="input-group">
-                  <TextField
-                    fullWidth
-                    className="mx-5 mt-2"
-                    id="standard-basic"
-                    name="Email"
-                    label="Email"
-                  />
-                </div>
-                <div className="input-group">
-                  <TextField
-                    fullWidth
-                    className="mx-5 mt-2"
-                    id="standard-basic"
-                    name="Subject"
-                    label="Subject"
-                  />
-                </div>
-                <div className="input-group">
-                  <TextField
-                    fullWidth
-                    className="mx-5 mt-2"
-                    id="standard-basic"
-                    name="Message"
-                    label="Message"
-                  />
-                </div>
-              </Col>
-            </Row>
-          </div>
+      <form
+        className="border border-white rounded "
+        noValidate
+        autoComplete="off"
+        onSubmit={this.submitForm}
+        action="https://formspree.io/mbjkpdwv"
+        method="POST"
+      >
+        <div className="md-form border-white border">
+          <Row className="d-flex justify-content-center">
+            <Col className="col-lg mt-3">
+              <div className="input-group">
+                <TextField
+                  fullWidth
+                  className="mx-5 mt-2"
+                  id="standard-basic"
+                  name="Full name"
+                  label="Full name"
+                />
+              </div>
+              <div className="input-group">
+                <TextField
+                  fullWidth
+                  className="mx-5 mt-2"
+                  id="standard-basic"
+                  name="Email"
+                  label="Email"
+                />
+              </div>
+              <div className="input-group">
+                <TextField
+                  fullWidth
+                  className="mx-5 mt-2"
+                  id="standard-basic"
+                  name="Subject"
+                  label="Subject"
+                />
+              </div>
+              <div className="input-group">
+                <TextField
+                  fullWidth
+                  className="mx-5 mt-2"
+                  id="standard-basic"
+                  name="Message"
+                  label="Message"
+                />
+              </div>
+            </Col>
+          </Row>
+        </div>
 
-          {status === "SUCCESS" ? (
-            <p>Thanks!</p>
-          ) : (
-            <div className="text-center">
-              <Button
-                className="m-4"
-                variant="contained"
-                color="primary"
-                endIcon={<Icon>send</Icon>}
-              >
-                Send
-              </Button>
-            </div>
-          )}
-          {status === "ERROR" && (
-            <p className="text-center">Oops! There was an error.</p>
-          )}
-        </form>
-      </Styles>
+        {status === "SUCCESS" ? (
+          <p>Thanks!</p>
+        ) : (
+          <div className="text-center">
+            <Button
+              className="m-4"
+              variant="contained"
+              color="primary"
+              endIcon={<Icon>send</Icon>}
+            >
+              Send
+            </Button>
+          </div>
+        )}
+        {status === "ERROR" && (
+          <p className="text-center">Oops! There was an error.</p>
+        )}
+      </form>
     );
   }
 

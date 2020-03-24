@@ -55,11 +55,11 @@ export default class Header extends React.Component {
                 </p>
                 <Container>
                   <Row>
-                    <Col>
-                      <Row className="m-2">
+                    <Col className="col-6">
+                      <Row className=" m-2">
                         <img
                           className="mr-2"
-                          style={{ width: "30px" }}
+                          style={{ width: "30px", height: "30px" }}
                           src={java}
                           alt="java"
                         />
@@ -68,7 +68,7 @@ export default class Header extends React.Component {
                       <Row className="m-2">
                         <img
                           className="float-left mr-2"
-                          style={{ width: "30px" }}
+                          style={{ width: "30px", height: "30px" }}
                           src={python}
                           alt="python"
                         />
@@ -77,18 +77,18 @@ export default class Header extends React.Component {
                       <Row className="m-2">
                         <img
                           className="float-left mr-2"
-                          style={{ width: "30px" }}
+                          style={{ width: "30px", height: "30px" }}
                           src={javascript}
                           alt="javascript"
                         />
                         <pre className="my-auto">Javascript</pre>
                       </Row>
                     </Col>
-                    <Col>
+                    <Col className="col-6">
                       <Row className="m-2">
                         <img
                           className="float-left mr-2"
-                          style={{ width: "30px" }}
+                          style={{ width: "30px", height: "30px" }}
                           src={spring}
                           alt="spring"
                         />
@@ -97,7 +97,7 @@ export default class Header extends React.Component {
                       <Row className="m-2">
                         <img
                           className="float-left mr-2"
-                          style={{ width: "30px" }}
+                          style={{ width: "30px", height: "30px" }}
                           src={react}
                           alt="react"
                         />
@@ -106,7 +106,7 @@ export default class Header extends React.Component {
                       <Row className="m-2">
                         <img
                           className="float-left mr-2"
-                          style={{ width: "30px" }}
+                          style={{ width: "30px", height: "30px" }}
                           src={mongodb}
                           alt="mongodb"
                         />

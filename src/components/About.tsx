@@ -42,10 +42,10 @@ export default class About extends React.Component {
     return (
       <Styles>
         <Container className="my-5">
-          <Row className="justify-content-center">
+          <Row className="justify-content-center h-100">
             <Col className="col-12 col-md-4">
               <img
-                className="rounded picture shadow"
+                className="rounded picture shadow mx-auto d-block mb-4 mb-md-0"
                 src={pictureofme}
                 alt="Me!"
               />

@@ -6,7 +6,6 @@ import styled from "styled-components";
 
 const Styles = styled.div`
   .shadow {
-
     box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px;
     transition: all 0.3s ease-in-out;
 
@@ -23,8 +22,11 @@ const Styles = styled.div`
 
 export const Repo = (props: Props) => (
   <Styles>
-    <Card className="shadow mt-2 card-body flex-fill">
-      <Card.Body style={{padding: 0}} className="text-center d-inline-flex align-items-center flex-column">
+    <Card border="light" className="shadow mt-2 card-body flex-fill">
+      <Card.Body
+        style={{ padding: 0 }}
+        className="text-center align-items-center"
+      >
         <Card.Title>{props.repo.name}</Card.Title>
         <pre>{props.repo.language}</pre>
         <p>{props.repo.description}</p>
