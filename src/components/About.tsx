@@ -5,13 +5,28 @@ import { Container, Row, Col, Card } from "react-bootstrap";
 
 const Styles = styled.div`
   .picture {
-    max-width: 350px;
+    max-width: 300px;
     max-height: auto;
+
+    @media (min-width: 576px) {
+      position: absolute;
+      bottom: auto;
+      top: auto;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+    }
 
     @media (max-width: 576px) {
       width: 250px;
     }
+  }
 
+  .text {
+    position: relative;
+  }
+
+  .shadow {
     box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px;
     transition: all 0.3s ease-in-out;
 
@@ -25,27 +40,36 @@ const Styles = styled.div`
 export default class About extends React.Component {
   render() {
     return (
-      <div>
-        <Styles>
-          <Container>
-            <Row>
-              <Col className="col-12 col-md-6">
+      <Styles>
+        <Container className="my-5">
+          <Row className="justify-content-center">
+            <Col className="col-12 col-md-4">
+              <img
+                className="rounded picture shadow"
+                src={pictureofme}
+                alt="Me!"
+              />
+            </Col>
+            <Col className="col-12 col-md-5 text">
+              <Card body border="light" className="shadow rounded">
                 <h2>About me</h2>
-                <Card body>
-                  <p>insert text here</p>
-                </Card>
-              </Col>
-              <Col className="col-12 col-md-6">
-                <img
-                  className="rounded picture d-block mx-auto mt-2"
-                  src={pictureofme}
-                  alt="Me!"
-                />
-              </Col>
-            </Row>
-          </Container>
-        </Styles>
-      </div>
+                <p>
+                  I grew up in France, in the beautiful region of Alsace, where
+                  I rapidly took interest in computers and technology. After
+                  graduating high school, I left to study Economics at the
+                  London-based University College London, while never forgetting
+                  my life-long passion for technology.
+                </p>
+                <p>
+                  Now, I work as a Junior Developer, with a keen interest in
+                  APIs, platform-agnostic microservices and an ambition to learn
+                  more about machine learning.
+                </p>
+              </Card>
+            </Col>
+          </Row>
+        </Container>
+      </Styles>
     );
   }
 }

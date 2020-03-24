@@ -10,10 +10,30 @@ import mongodb from "../assets/stack/mongodb.svg";
 import styled from "styled-components";
 
 const Styles = styled.div`
+
   .picture {
     height: 600px;
     @media (max-width: 576px) {
-      height: 400px;
+      position: absolute;
+      width: 90%;
+      z-index: 0;
+    }
+  }
+
+  .shadow {
+    box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      box-shadow: rgba(0, 0, 0, 0.22) 10px 10px 10px;
+      transform: translate3d(-3px, -3px, 0px);
+    }
+  }
+
+  .text {
+    @media (max-width: 576px) {
+      z-index: 1;
+      margin-top: 350px;
     }
   }
 `;
@@ -23,9 +43,9 @@ export default class Header extends React.Component {
     return (
       <Styles>
         <Container>
-          <Row className="mb-5 h-100 justify-content-center">
+          <Row className="mb-5">
             <Col className="col-12 col-md-6 m-auto order-2 order-md-1">
-              <Card body>
+              <Card body className="text shadow" border="light">
                 <h2>Hi :)</h2>
                 <h1 className="mb-2">My name is Léo Le Bleis.</h1>
                 <p className="lead text-justify text-wrap text-left">
@@ -36,62 +56,62 @@ export default class Header extends React.Component {
                 <Container>
                   <Row>
                     <Col>
-                      <img
-                        className="float-left mr-2"
-                        style={{ width: "30px" }}
-                        src={java}
-                        alt="java"
-                      />
-                      <p>Java</p>
+                      <Row className="m-2">
+                        <img
+                          className="mr-2"
+                          style={{ width: "30px" }}
+                          src={java}
+                          alt="java"
+                        />
+                        <pre className="my-auto">Java</pre>
+                      </Row>
+                      <Row className="m-2">
+                        <img
+                          className="float-left mr-2"
+                          style={{ width: "30px" }}
+                          src={python}
+                          alt="python"
+                        />
+                        <pre className="my-auto">Python</pre>
+                      </Row>
+                      <Row className="m-2">
+                        <img
+                          className="float-left mr-2"
+                          style={{ width: "30px" }}
+                          src={javascript}
+                          alt="javascript"
+                        />
+                        <pre className="my-auto">Javascript</pre>
+                      </Row>
                     </Col>
                     <Col>
-                      <img
-                        className="float-left mr-2"
-                        style={{ width: "30px" }}
-                        src={spring}
-                        alt="spring"
-                      />
-                      <p>Spring</p>
-                    </Col>
-                  </Row>
-                  <Row>
-                    <Col>
-                      <img
-                        className="float-left mr-2"
-                        style={{ width: "30px" }}
-                        src={python}
-                        alt="python"
-                      />
-                      <p>Python</p>
-                    </Col>
-                    <Col className="">
-                      <img
-                        className="float-left mr-2"
-                        style={{ width: "30px" }}
-                        src={react}
-                        alt="react"
-                      />
-                      <p>React</p>
-                    </Col>
-                  </Row>
-                  <Row>
-                    <Col>
-                      <img
-                        className="float-left mr-2"
-                        style={{ width: "30px" }}
-                        src={javascript}
-                        alt="javascript"
-                      />
-                      <p>Javascript</p>
-                    </Col>
-                    <Col>
-                      <img
-                        className="float-left mr-2"
-                        style={{ width: "30px" }}
-                        src={mongodb}
-                        alt="mongodb"
-                      />
-                      <p>MongoDB</p>
+                      <Row className="m-2">
+                        <img
+                          className="float-left mr-2"
+                          style={{ width: "30px" }}
+                          src={spring}
+                          alt="spring"
+                        />
+                        <pre className="my-auto">Spring</pre>
+                      </Row>
+                      <Row className="m-2">
+                        <img
+                          className="float-left mr-2"
+                          style={{ width: "30px" }}
+                          src={react}
+                          alt="react"
+                        />
+                        <pre className="my-auto">React.js</pre>
+                      </Row>
+                      <Row className="m-2">
+                        <img
+                          className="float-left mr-2"
+                          style={{ width: "30px" }}
+                          src={mongodb}
+                          alt="mongodb"
+                        />
+                        <pre className="my-auto">MongoDB</pre>
+                      </Row>
                     </Col>
                   </Row>
                 </Container>

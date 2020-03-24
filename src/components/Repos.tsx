@@ -1,6 +1,6 @@
 import React from "react";
 import { Repo } from "./Repo";
-import { Row, Container } from "react-bootstrap";
+import { Row, Col, Container } from "react-bootstrap";
 
 const user = "Leolebleis";
 
@@ -10,7 +10,33 @@ const convertResponseToJson = (response: any) => {
       "There was a problem with the API response, status code:",
       response.status
     );
-    return;
+    const repos = [
+      {
+        name: response.status + "!",
+        description: "There was an issue with the github API.",
+        html_url: "https://github.com/Leolebleis/",
+        language: "French"
+      },
+      {
+        name: response.status + "!",
+        description: "There was an issue with the github API.",
+        html_url: "https://github.com/Leolebleis/",
+        language: "French"
+      },
+      {
+        name: response.status + "!",
+        description: "There was an issue with the github API.",
+        html_url: "https://github.com/Leolebleis/",
+        language: "French"
+      },
+      {
+        name: response.status + "!",
+        description: "There was an issue with the github API.",
+        html_url: "https://github.com/Leolebleis/",
+        language: "French"
+      }
+    ];
+    return repos;
   }
 
   return response.json();
@@ -44,10 +70,15 @@ export default class Repos extends React.Component {
     const repos = this.state.repos;
     return (
       <Container>
-        <h2 className="mt-5">Check out my projects</h2>
         <Row>
-          {repos.map(repo => (
-            <Repo repo={repo} />
+          <h2 className="mt-2 ml-3">Check out some of my projects</h2>
+        </Row>
+
+        <Row className="h-100 mb-2">
+          {repos.map((repo, i) => (
+            <Col className="d-flex col-12 col-md-4" key={i}>
+              <Repo repo={repo} />
+            </Col>
           ))}
         </Row>
       </Container>

@@ -5,8 +5,7 @@ import MyForm from "./MyForm";
 class Contact extends React.Component {
   render() {
     return (
-      <div>
-        <Container>
+        <Container className="mt-5">
           <Row className="d-flex justify-content-center mt-2">
             <Col className="col-lg-8">
               <h2>Contact me</h2>
@@ -16,7 +15,6 @@ class Contact extends React.Component {
             </Col>
           </Row>
         </Container>
-      </div>
     );
   }
 }
