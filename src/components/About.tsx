@@ -1,7 +1,11 @@
 import React from "react";
-import pictureofme from "../assets/pictureofme.jpg";
+import PictureOfMe from "../assets/pictureofme.jpg";
 import styled from "styled-components";
-import { Container, Row, Col, Card } from "react-bootstrap";
+import Container from "react-bootstrap/Container";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
+import Card from "react-bootstrap/Card";
+import Icon from "../assets/about-rpg.svg";
 
 const Styles = styled.div`
   .picture {
@@ -35,6 +39,11 @@ const Styles = styled.div`
       transform: translate3d(-3px, -3px, 0px);
     }
   }
+
+  .icon {
+    max-width: 40px;
+    max-height: 40px;
+  }
 `;
 
 export default class About extends React.Component {
@@ -46,12 +55,13 @@ export default class About extends React.Component {
             <Col className="col-12 col-md-4">
               <img
                 className="rounded picture shadow mx-auto d-block mb-4 mb-md-0"
-                src={pictureofme}
+                src={PictureOfMe}
                 alt="Me!"
               />
             </Col>
             <Col className="col-12 col-md-5 text">
               <Card body border="light" className="shadow rounded">
+                <img src={Icon} alt="Shield and sword icon" className="icon float-left pr-1" />
                 <h2>About me</h2>
                 <p>
                   I grew up in France, in the beautiful region of Alsace, where

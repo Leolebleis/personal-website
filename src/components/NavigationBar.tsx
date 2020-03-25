@@ -18,7 +18,7 @@ const Styles = styled.div`
     padding: 10px;
 
     @media (max-width: 576px) {
-      padding: 8px
+      padding: 8px;
     }
   }
 `;
@@ -43,35 +43,50 @@ export default function HideAppBar(props: any) {
       <CssBaseline />
       <HideOnScroll {...props}>
         <AppBar style={{ background: "transparent", boxShadow: "none" }}>
-          >
           <Toolbar>
             <Container>
               <Row className="h-100">
                 <Col className="col-8 no-padding my-auto">
                   <Button
                     className="no-padding"
-                    style={{ textTransform: "none", fontSize: 12, minWidth: "0px" }}
+                    style={{
+                      textTransform: "none",
+                      fontSize: 12,
+                      minWidth: "0px"
+                    }}
                     href="/#home"
                   >
                     Home
                   </Button>
                   <Button
                     className="no-padding"
-                    style={{ textTransform: "none", fontSize: 12, minWidth: "0px" }}
+                    style={{
+                      textTransform: "none",
+                      fontSize: 12,
+                      minWidth: "0px"
+                    }}
                     href="/#about"
                   >
                     About
                   </Button>
                   <Button
                     className="no-padding"
-                    style={{ textTransform: "none", fontSize: 12, minWidth: "0px" }}
+                    style={{
+                      textTransform: "none",
+                      fontSize: 12,
+                      minWidth: "0px"
+                    }}
                     href="/#projects"
                   >
                     Projects
                   </Button>
                   <Button
                     className="no-padding"
-                    style={{ textTransform: "none", fontSize: 12, minWidth: "0px" }}
+                    style={{
+                      textTransform: "none",
+                      fontSize: 12,
+                      minWidth: "0px"
+                    }}
                     href="/#contact"
                   >
                     Contact
