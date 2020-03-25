@@ -24,21 +24,20 @@ class App extends React.Component {
 
           <NavigationBar />
         </Container>
-        <Header />
         <Router>
           <Switch>
             <Route path="/" exact>
+              <Header />
+              
               <ScrollableAnchor id={"about"}>
                 <About />
               </ScrollableAnchor>
-
               {/* API Rate limit */}
               <ScrollableAnchor id={"projects"}>
                 <div className="bg-light p-2">
                   <Repos />
                 </div>
               </ScrollableAnchor>
-
               <ScrollableAnchor id={"contact"}>
                 <Contact />
               </ScrollableAnchor>

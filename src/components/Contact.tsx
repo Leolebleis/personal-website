@@ -1,7 +1,11 @@
 import React from "react";
-import { Container, Card, Row, Col } from "react-bootstrap";
+import Container from "react-bootstrap/Container";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
+import Card from "react-bootstrap/Card";
 import MyForm from "./MyForm";
 import styled from "styled-components";
+import Icon from "../assets/contact-computer.svg";
 
 const Styles = styled.div`
   .shadow {
@@ -13,16 +17,24 @@ const Styles = styled.div`
       transform: translate3d(-3px, -3px, 0px);
     }
   }
+
+  .icon {
+    width: 40px;
+    height: 40px;
+  }
 `;
 
 class Contact extends React.Component {
   render() {
     return (
       <Styles>
-        <Container className="mt-5">
-          <Row className="d-flex justify-content-center mt-2">
-            <Col className="col-lg-8">
-              <h2>Contact me</h2>
+        <Container className="my-5">
+          <Row className="justify-content-center">
+            <img src={Icon} alt="Computer icon" className="icon mb-3" />
+          </Row>
+          <Row className="d-flex justify-content-center">
+            <Col className="col-md-8 text-center">
+              <h2 className="mb-3">Contact me</h2>
               <Card className="shadow" border="light">
                 <MyForm />
               </Card>

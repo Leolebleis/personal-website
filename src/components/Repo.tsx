@@ -22,7 +22,7 @@ const Styles = styled.div`
 
 export const Repo = (props: Props) => (
   <Styles>
-    <Card border="light" className="shadow mt-2 card-body">
+    <Card border="light" className="shadow mt-4 card-body">
       <Card.Body style={{ padding: 0 }} className="text-center">
         <Card.Title>{props.repo.name}</Card.Title>
         <pre>{props.repo.language}</pre>
