@@ -2,7 +2,6 @@ import React from "react";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import TextField from "@material-ui/core/TextField";
-import Button from "@material-ui/core/Button";
 import Icon from "@material-ui/core/Icon";
 
 export default class MyForm extends React.Component<{}, { status: string }> {
@@ -33,7 +32,7 @@ export default class MyForm extends React.Component<{}, { status: string }> {
                   fullWidth
                   className="mx-5 mt-2"
                   id="standard-basic"
-                  name="Full name"
+                  name="full name"
                   label="Full name"
                 />
               </div>
@@ -42,7 +41,7 @@ export default class MyForm extends React.Component<{}, { status: string }> {
                   fullWidth
                   className="mx-5 mt-2"
                   id="standard-basic"
-                  name="Email"
+                  name="email"
                   label="Email"
                 />
               </div>
@@ -51,7 +50,7 @@ export default class MyForm extends React.Component<{}, { status: string }> {
                   fullWidth
                   className="mx-5 mt-2"
                   id="standard-basic"
-                  name="Subject"
+                  name="subject"
                   label="Subject"
                 />
               </div>
@@ -60,27 +59,19 @@ export default class MyForm extends React.Component<{}, { status: string }> {
                   fullWidth
                   className="mx-5 mt-2"
                   id="standard-basic"
-                  name="Message"
+                  name="message"
                   label="Message"
                 />
               </div>
             </Col>
           </Row>
         </div>
-
         {status === "SUCCESS" ? (
           <p>Thanks!</p>
         ) : (
-          <div className="text-center">
-            <Button
-              className="m-4"
-              variant="contained"
-              color="primary"
-              endIcon={<Icon>send</Icon>}
-            >
-              Send
-            </Button>
-          </div>
+          <button className="btn btn-large btn-primary my-4">
+            <span className="align-middle">Send</span> <Icon className="align-middle ml-1">send</Icon>
+          </button>
         )}
         {status === "ERROR" && (
           <p className="text-center">Oops! There was an error.</p>
