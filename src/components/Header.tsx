@@ -1,5 +1,8 @@
 import React from "react";
-import { Container, Row, Col, Card } from "react-bootstrap";
+import Col from "react-bootstrap/Col";
+import Row from "react-bootstrap/Row";
+import Container from "react-bootstrap/Container";
+import Card from "react-bootstrap/Card";
 import logo from "../assets/logo.svg";
 import react from "../assets/stack/react.svg";
 import spring from "../assets/stack/spring.svg";

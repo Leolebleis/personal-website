@@ -16,29 +16,28 @@ const Styles = styled.div`
   }
 
   .card-body {
-    min-height: 230px;
+    min-height: 150px;
   }
 `;
 
 export const Repo = (props: Props) => (
   <Styles>
-    <Card border="light" className="shadow mt-2 card-body flex-fill">
-      <Card.Body
-        style={{ padding: 0 }}
-        className="text-center align-items-center"
-      >
+    <Card border="light" className="shadow mt-2 card-body">
+      <Card.Body style={{ padding: 0 }} className="text-center">
         <Card.Title>{props.repo.name}</Card.Title>
         <pre>{props.repo.language}</pre>
         <p>{props.repo.description}</p>
+      </Card.Body>
+      <Card.Footer className="text-center">
         <IconButton
-          className="mt-auto"
+          className=""
           href={props.repo.html_url}
           target="_blank"
           rel="noopener noreferrer"
         >
           <GitHubIcon />
         </IconButton>
-      </Card.Body>
+      </Card.Footer>
     </Card>
   </Styles>
 );

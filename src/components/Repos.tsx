@@ -1,6 +1,8 @@
 import React from "react";
 import { Repo } from "./Repo";
-import { Row, Col, Container } from "react-bootstrap";
+import Col from "react-bootstrap/Col";
+import Row from "react-bootstrap/Row";
+import Container from "react-bootstrap/Container";
 
 const user = "Leolebleis";
 
@@ -24,50 +26,20 @@ export default class Repos extends React.Component {
   };
 
   componentDidMount() {
-    // fetch(`https://api.github.com/users/${user}/repos?sort=pushed`)
-    //   .then(convertResponseToJson)
-    //   .then(response =>
-    //     this.setState({
-    //       repos: response,
-    //       loading: false
-    //     })
-    //   )
-    // .catch(error =>
-    //   this.setState({
-    //     loading: false,
-    //     error: true
-    //   })
-    // );
-
-    this.setState({
-      loading: false,
-      repos: [
-        {
-          name: "400!",
-          description: "There was an issue with the github API.",
-          html_url: "https://github.com/Leolebleis/",
-          language: "French"
-        },
-        {
-          name: "400!",
-          description: "There was an issue with the github API.",
-          html_url: "https://github.com/Leolebleis/",
-          language: "French"
-        },
-        {
-          name: "400!",
-          description: "There was an issue with the github API.",
-          html_url: "https://github.com/Leolebleis/",
-          language: "French"
-        },
-        {
-          name: "400!",
-          description: "There was an issue with the github API.",
-          html_url: "https://github.com/Leolebleis/",
-          language: "French"
-        }
-      ]
-    });
+    fetch(`https://api.github.com/users/${user}/repos?sort=pushed`)
+      .then(convertResponseToJson)
+      .then(response =>
+        this.setState({
+          repos: response,
+          loading: false
+        })
+      )
+      .catch(error =>
+        this.setState({
+          loading: false,
+          error: true
+        })
+      );
   }
 
   render() {
@@ -80,7 +52,10 @@ export default class Repos extends React.Component {
 
         <Row className="h-100 mb-2">
           {repos.map((repo, i) => (
-            <Col className="d-flex col-12 col-md-4 d-flex justify-content-center" key={i}>
+            <Col
+              className="col-12 col-md-4 "
+              key={i}
+            >
               <Repo repo={repo} />
             </Col>
           ))}
