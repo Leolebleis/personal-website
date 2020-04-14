@@ -21,6 +21,7 @@ const Styles = styled.div`
       padding: 8px;
     }
   }
+  
 `;
 
 function HideOnScroll(props: any) {
@@ -36,10 +37,10 @@ function HideOnScroll(props: any) {
 
 export default function HideAppBar(props: any) {
   return (
-    <Styles className="mb-2">
+    <Styles className="mb-2 nav">
       <CssBaseline />
       <HideOnScroll {...props}>
-        <AppBar className="bg-light" style={{ boxShadow: "none" }}>
+        <AppBar className="bg-light" style={{ opacity: 0.90, boxShadow: "none" }}>
           <Toolbar>
             <Container>
               <Row className="h-100">
@@ -49,7 +50,7 @@ export default function HideAppBar(props: any) {
                     style={{
                       textTransform: "none",
                       fontSize: 12,
-                      minWidth: "0px"
+                      minWidth: "0px",
                     }}
                     href="/#home"
                   >
@@ -60,7 +61,7 @@ export default function HideAppBar(props: any) {
                     style={{
                       textTransform: "none",
                       fontSize: 12,
-                      minWidth: "0px"
+                      minWidth: "0px",
                     }}
                     href="/#about"
                   >
@@ -71,7 +72,7 @@ export default function HideAppBar(props: any) {
                     style={{
                       textTransform: "none",
                       fontSize: 12,
-                      minWidth: "0px"
+                      minWidth: "0px",
                     }}
                     href="/#projects"
                   >
@@ -82,7 +83,7 @@ export default function HideAppBar(props: any) {
                     style={{
                       textTransform: "none",
                       fontSize: 12,
-                      minWidth: "0px"
+                      minWidth: "0px",
                     }}
                     href="/#contact"
                   >
