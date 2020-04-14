@@ -51,9 +51,9 @@ export default class Header extends React.Component {
               <Card body className="text shadow" border="light">
                 <h2>Hi :)</h2>
                 <h1 className="mb-2">My name is Léo Le Bleis.</h1>
-                <p className="lead text-justify text-wrap text-left">
-                  I am an economics graduate and a technologist. I am a software
-                  developer living in London. I build web apps, and have
+                <p className="lead text-justify">
+                  I am an economics graduate and technologist turned software
+                  developer. I live in London, and I build web apps. I have
                   experience in:
                 </p>
                 <Container>

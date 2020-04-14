@@ -25,9 +25,6 @@ const Styles = styled.div`
 
 function HideOnScroll(props: any) {
   const { children, window } = props;
-  // Note that you normally won't need to set the window ref as useScrollTrigger
-  // will default to window.
-  // This is only being set here because the demo is in an iframe.
   const trigger = useScrollTrigger({ target: window ? window() : undefined });
 
   return (
@@ -39,10 +36,10 @@ function HideOnScroll(props: any) {
 
 export default function HideAppBar(props: any) {
   return (
-    <Styles>
+    <Styles className="mb-2">
       <CssBaseline />
       <HideOnScroll {...props}>
-        <AppBar style={{ background: "transparent", boxShadow: "none" }}>
+        <AppBar className="bg-light" style={{ boxShadow: "none" }}>
           <Toolbar>
             <Container>
               <Row className="h-100">

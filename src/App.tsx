@@ -28,15 +28,11 @@ class App extends React.Component {
           <Switch>
             <Route path="/" exact>
               <Header />
-              
               <ScrollableAnchor id={"about"}>
                 <About />
               </ScrollableAnchor>
-              {/* API Rate limit */}
               <ScrollableAnchor id={"projects"}>
-                <div className="bg-light p-2">
-                  <Repos />
-                </div>
+                <Repos />
               </ScrollableAnchor>
               <ScrollableAnchor id={"contact"}>
                 <Contact />

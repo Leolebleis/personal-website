@@ -63,14 +63,14 @@ export default class About extends React.Component {
               <Card body border="light" className="shadow rounded">
                 <img src={Icon} alt="Shield and sword icon" className="icon float-left pr-1" />
                 <h2>About me</h2>
-                <p>
+                <p className="text-justify">
                   I grew up in France, in the beautiful region of Alsace, where
                   I rapidly took interest in computers and technology. After
                   graduating high school, I left to study Economics at the
                   London-based University College London, while never forgetting
                   my life-long passion for technology.
                 </p>
-                <p>
+                <p className="text-justify">
                   Now, I work as a Junior Developer, with a keen interest in
                   APIs, platform-agnostic microservices and an ambition to learn
                   more about machine learning.
