@@ -26,7 +26,7 @@ export default class MyForm extends React.Component<{}, { status: string }> {
       >
         <div className="md-form border-white border">
           <Row className="d-flex justify-content-center">
-            <Col className="col-lg mt-3">
+            <Col className="col-lg">
               <div className="input-group">
                 <TextField
                   fullWidth

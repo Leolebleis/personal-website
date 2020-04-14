@@ -36,6 +36,7 @@ class Contact extends React.Component {
             <Col className="col-md-8 text-center">
               <h2 className="mb-3">Contact me</h2>
               <Card className="shadow" border="light">
+                <p className="lead mt-5 mx-5">Though I am not currently looking for new opportunities, please get in touch!</p>
                 <MyForm />
               </Card>
             </Col>
