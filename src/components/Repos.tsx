@@ -55,7 +55,7 @@ export default class Repos extends React.Component {
     const repos = this.state.repos;
     return (
       <Styles className="bg-white p-5">
-        <Container className="">
+        <Container>
           <Row className="justify-content-center">
             <img src={Icon} alt="Screen with code icon" className="icon mb-3" />
           </Row>
