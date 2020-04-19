@@ -3,7 +3,7 @@ import About from "./components/About";
 import Contact from "./components/Contact";
 import Repos from "./components/Repos";
 import { Footer } from "./components/Footer";
-import { NoMatch } from "./components/NoMatch";
+import NoMatch from "./components/NoMatch";
 import { NavigationBar } from "./components/NavigationBar";
 import ScrollableAnchor from "react-scrollable-anchor";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
@@ -38,7 +38,9 @@ class App extends React.Component {
                 <Contact />
               </ScrollableAnchor>
             </Route>
-            <Route component={NoMatch} />
+            <Route>
+              <NoMatch />
+            </Route>
           </Switch>
         </Router>
         <Footer />
