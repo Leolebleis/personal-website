@@ -1,11 +1,12 @@
 import React from "react";
-import PictureOfMe from "../assets/pictureofme.jpg";
+import pictureOfMe from "../assets/pictureofme.jpg";
 import styled from "styled-components";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Card from "react-bootstrap/Card";
-import Icon from "../assets/about-rpg.svg";
+import aboutIcon from "../assets/about-rpg.svg";
+import resume from "../assets/CV.pdf";
 
 const Styles = styled.div`
   .picture {
@@ -55,27 +56,43 @@ export default class About extends React.Component {
             <Col className="col-12 col-md-4">
               <img
                 className="rounded picture shadow mx-auto d-block mb-4 mb-md-0"
-                src={PictureOfMe}
+                src={pictureOfMe}
                 alt="Me!"
               />
             </Col>
             <Col className="col-12 col-md-5 text">
               <Card body border="light" className="shadow rounded">
-                <img src={Icon} alt="Shield and sword icon" className="icon float-left pr-1" />
+                <img
+                  src={aboutIcon}
+                  alt="Shield and sword icon"
+                  className="icon float-left pr-1"
+                />
                 <h2>About me</h2>
-                <p className="text-justify">
+                <p className="text-justify" style={{ fontSize: "1rem" }}>
                   I grew up in France, in the beautiful region of Alsace, where
                   I rapidly took interest in computers and technology. After
                   graduating high school, I left to study Economics at the
                   London-based University College London, while never forgetting
                   my life-long passion for technology.
                 </p>
-                <p className="text-justify">
+                <p className="text-justify" style={{ fontSize: "1rem" }}>
                   Now, I work as a Junior Developer, with a keen interest in
                   APIs, platform-agnostic microservices and an ambition to learn
                   more about machine learning.
                 </p>
               </Card>
+            </Col>
+          </Row>
+          <Row className="m-5 justify-content-center">
+            <Col className="col-auto">
+              <a
+                className="btn btn-outline-info px-4 py-3"
+                href={resume}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Download my CV
+              </a>
             </Col>
           </Row>
         </Container>

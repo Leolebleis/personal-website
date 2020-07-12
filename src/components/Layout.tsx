@@ -1,6 +1,6 @@
 import React, { Props } from "react";
 import Container from "react-bootstrap/Container";
-import styled from "styled-components";
+import styled, { createGlobalStyle } from "styled-components";
 
 const Styles = styled.div`
   .container {
