@@ -11,6 +11,9 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Container from "react-bootstrap/Container";
 import Header from "./components/Header";
 import { BackgroundImage } from "./components/BackgroundImage";
+import analytics from "./analytics";
+
+analytics.page()
 
 class App extends React.Component {
   render() {
