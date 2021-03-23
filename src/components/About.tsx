@@ -76,9 +76,9 @@ export default class About extends React.Component {
                   my life-long passion for technology.
                 </p>
                 <p className="text-justify" style={{ fontSize: "1rem" }}>
-                  Now, I work as a Junior Developer, with a keen interest in
-                  APIs, platform-agnostic microservices and an ambition to learn
-                  more about machine learning.
+                  Now, I work as a Backend Developer, with a keen interest in
+                  APIs, platform-agnostic microservices, and writing the best
+                  software possible.
                 </p>
               </Card>
             </Col>
